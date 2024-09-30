@@ -27,7 +27,6 @@ const handleClick = () => {
   return (
     <div className='container'>
       <span className='calender' onClick={handleClick}>
-       {/* { `${format(date.startDate, 'mmm,dd,yyyy')} to ${format(date.endDate, 'mmm,dd,yyyy')}`} */}
        Calendar  
       </span>
       { openDate && <DateRangePicker
@@ -43,11 +42,4 @@ const handleClick = () => {
 
 export default Home;
 
-// This is the new Calender
-// This is the new Calender
-// This is the new Calender
-// This is the new Calender
-// This is the new Calender
-// This is the new Calender
-// This is the new Calender
 // This is the new Calender
