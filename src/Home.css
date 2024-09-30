@@ -4,12 +4,22 @@
     align-items: center;
     height: 100px;
     position : relative;
+    
 }
 
 .calender {
     padding: 20px;
     border: 2px solid grey;
     cursor: pointer;
+    background-color: grey;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    border: 1px solid black;
+}
+.calender:hover{
+    background-color: darkgray;
 }
 
 .dateRange{

@@ -3,11 +3,16 @@ import {DateRangePicker} from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css
 import './Home.css';
-import { format } from 'date-fns';
+import { format } from 'date-fns';  
+import { enUS } from 'date-fns/locale';
+
+
+
+
 
 const Home = () => {
-    const [openDate, setOpenDate] = useState(false);
-const [date, setDate] = useState({
+  const [openDate, setOpenDate] = useState(false);
+  const [date, setDate] = useState({
   startDate: new Date(),
   endDate : new Date(),
   key: 'selection',
@@ -17,16 +22,18 @@ const handleChange = (ranges) => {
  setDate(ranges.selection);
 };
 
-// const handleClick = () => {
-//   setOpenDate((prev)=> !prev)
-// };
+const handleClick = () => {
+  setOpenDate((prev)=> !prev)
+};
 
   return (
     <div className='container'>
-      <span className='calender' >
-       { `${format(date.startDate, 'MMM,dd,yyyy')} to ${format(date.endDate, 'MMM,dd,yyyy')}`}
+      <span className='calender' onClick={handleClick}>
+       {/* { `${format(date.startDate, 'mmm,dd,yyyy')} to ${format(date.endDate, 'mmm,dd,yyyy')}`} */}
+       Calendar  
       </span>
-      { <DateRangePicker
+      { openDate && <DateRangePicker
+       locale={enUS}
       className='dateRange'
         ranges={[date]}
         onChange={handleChange}
@@ -37,3 +44,4 @@ const handleChange = (ranges) => {
 };
 
 export default Home;
+// 
