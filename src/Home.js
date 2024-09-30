@@ -8,8 +8,6 @@ import { enUS } from 'date-fns/locale';
 
 
 
-
-
 const Home = () => {
   const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState({
@@ -44,5 +42,5 @@ const handleClick = () => {
 };
 
 export default Home;
-// 
-// this is the new Calender
+
+// This is the new Calender
